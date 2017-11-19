@@ -1,0 +1,76 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="script.js"></script>
+			<link rel="stylesheet" href="connect.css">
+
+	</head>
+
+	<body style="background-color:#488e77">
+		<div class="container-fluid">
+			<div class="col-xs-12" >
+				<p id="pageHeader"> Create Event </p>
+			</div>
+
+			<div class="form-group">
+				<label for="eventName">event title</label>
+				<input id="eventNameInput" class="form-control" type="text" name="eventName" placeholder="Enter your event name!" >
+			</div>
+
+			<div class="form-group">
+				<label for="eventDate">date</label>
+				<input id="dateInput" class="form-control" type="date" name="eventDate">
+			</div>
+
+			<div class="form-group">
+				<label for="eventDescrip">description</label>
+				<textarea rows="4" id="descripInput" class="form-control" type="text" name="eventDescrip" placeholder="Enter your event description!"></textarea>
+			</div>
+<!--
+			<div class="panel panel-primary">
+				<div class="panel-heading">Enter new event info</div>
+				<div class="panel-body">
+					<input id="eventNameInput" class="form-control" type="text" name="eventName" placeholder="Enter your event name!" >
+					<input id="dateInput" class="form-control" type="date" name="eventDate">
+					<input id="descripInput" class="form-control" type="text" name="eventDescrip" placeholder="Enter your event description!">
+				</div>
+			</div>
+-->
+				<!--<p> <input id="loginInput" type="time" name="Time" value="Time"> </p>
+				<p> <input id="loginInput" type="text" name="PickMember" value="Add this Event to Family Calendars"> </p>
+			-->
+			<button id="submitEvent" type="button" class="btn btn-success btn-lg" onclick=saveEvent()> Create </button>
+			<button id="resetEvent" type="button" class="btn btn-default" onclick=resetEvent()> Reset </button>
+			<div id="eventAlert"></div>
+
+			<p id ="some_message"></p>
+			<p id ="some_message2"></p>
+			<p id ="some_message3"></p>
+
+			<!-- Bottom Nav -->
+
+			<!-- Navigation bar at bottom -->
+			<div class="row">
+				<div class="col-xs-12" id="bottomNav">
+					<div class="col-xs-3">
+						<a href="index.html"> <img src="images/home.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="sendMessage.html"> <img src="images/message.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="familyTree.html"> <img src="images/familytree.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="calendar.html"> <img src="images/calendar.png" align="center"> </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

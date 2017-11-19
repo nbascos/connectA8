@@ -1,0 +1,26 @@
+html, body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #35407a;
+
+}
+
+nav {
+  background-color: #94dda6;
+  width: 680px;
+  height:140px;
+}
+
+.nav-li {
+  margin: 0;
+  padding: 0 10px;
+  float:left;
+  //clear:both;
+}

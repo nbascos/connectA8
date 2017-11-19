@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="script.js"></script>
+	  <link rel="stylesheet" href="connect.css">
+	<body onload="setRecip();displayMsg()">
+		<div class="container-fluid">
+			<div id="header" class="row" style:"position:fixed">
+
+		    <div class="col-xs-12" id="msgBanner">
+		      <p id="bannerText" style="text-align:center"> NEW MESSAGE </p>
+		    </div>
+		    <div class="col-xs-12" id="recipientBanner">
+					<div class="col-xs-3">
+		      	<span id="rbText" style="text-align:left"> To: </span>
+					</div>
+					<div class="col-xs-7">
+						<select class="form-control" name ="rl" id="recipList">
+							<option>(Choose Recipient)</option>
+							<option>Leila</option>
+							<option>Meg</option>
+							<option>Rachel</option>
+							<option>Ryan</option>
+						</select>
+					</div>
+					<div class="col-xs-2">
+						<!-- <img id = "addRecip" src="images/plus.png" alt="Logo"> -->
+					</div>
+		    </div>
+
+			</div>
+
+			<div id="msgContent">
+				<div class="col-xs-12">
+					<p id="textBubble"></p>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div id="msgAlert"></div>
+			</div>
+			<div class="col-xs-12" id="msgSender">
+				<div class="form-group col-xs-10">
+					<textarea rows="3" id="msgInput" class="form-control" type="text" name="msgInput" placeholder="Enter your message!"></textarea>
+				</div>
+				<div class="col-xs-2">
+					<button id="sendMsgBtn" type="button" class="btn btn-success btn-lg" onclick=sendMsg()> Send </button>
+					<button id="sendMsgBtn" type="button" class="btn btn-default" onclick="clearMsg();"> Clear </button>
+				</div>
+			</div>
+
+			<!-- Bottom Nav -->
+			<div class="row">
+				<div class="col-xs-12" id="bottomNav">
+					<div class="col-xs-3">
+						<a href="index.html"> <img src="images/home.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="sendMessage.html"> <img src="images/message2.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="familyTree.html"> <img src="images/FamilyTree.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="calendar.html"> <img src="images/calendar.png" align="center"> </a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

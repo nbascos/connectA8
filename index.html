@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title> HOME, RECENT ACTIVITIES </title>
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900'
+      rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" type="text/css" href="main.css">-->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="connect.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+
+	<body id="mainBack" >
+		<div class="container-fluid">
+			<div id="content">
+			<!-- First generation, header buttons -->
+			<div class="row">
+				<div class="col-xs-12" id="topBar">
+
+					<div class="col-xs-2">
+						<img onclick="openNav()" src="images/profile.png"> </a>
+					</div>
+					<div class="col-xs-2">
+
+						<button type="button" class= "btn" onclick="openNav2()"> Add Event / Send Msg</button>
+					</div>
+
+				  <div class="col-xs-3">
+					</div>
+
+					<div class="col-xs-3">
+						<img src="images/ConnectiviTree.png"> </a>
+					</div>
+
+					<div class="col-xs-2">
+						<img src="images/Logo2.png"></a>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Header of middle bulk -->
+
+			<p id="recentTitle"> Recent Activity </p>
+
+
+			<!-- Activity Bulk -->
+			<div class="col-xs-12" id="actContainer">
+					<ul>
+						<li class="actItem">
+							<p> - Jerome created event: <a href="calendar.html">2017 Family Reunion</a></p>
+						</li>
+						<li class="actItem">
+							<p> - Jasmine finished reminder: <a href="calendar.html">take the trash out</a> </p>
+						</li>
+						<li class="actItem">
+							<p> - Benjamin asked permission: <a href="calendar.html">Movie w/Joshua</a></p>
+						</li>
+						<li class="actItem">
+							<p> - Bernard finished reminder: <a href="calendar.html">take insulin</a></p>
+						</li>
+						<li class="actItem">
+							<p> - Jerome created event: <a href="calendar.html">2017 Family Reunion</a></p>
+						</li>
+						<li class="actItem">
+							<p> - Jasmine finished reminder: <a href="calendar.html">take the trash out</a> </p>
+						</li>
+						<li class="actItem">
+							<p> - Benjamin asked permission: <a href="calendar.html">Movie w/Joshua</a></p>
+						</li>
+						<li class="actItem">
+							<p> - Bernard finished reminder: <a href="calendar.html">take insulin</a></p>
+						</li>
+						<li class="actItem">
+							<p> - Jerome created event: <a href="calendar.html">2017 Family Reunion</a></p>
+						</li>
+						<li class="actItem">
+							<p> - Jasmine finished reminder: <a href="calendar.html">take the trash out</a> </p>
+						</li>
+						<li class="actItem">
+							<p> - Benjamin asked permission: <a href="calendar.html">Movie w/Joshua</a></p>
+						</li>
+						<li class="actItem">
+							<p> - Bernard finished reminder: <a href="calendar.html">take insulin</a></p>
+						</li>
+					</ul>
+			</div>
+			<a href="login.html" role="button" class="btn btn-default">Logout</a>
+		</div>
+
+
+			<!-- Navigation bar at bottom -->
+			<div class="row">
+				<div class="col-xs-12" id="bottomNav">
+					<div class="col-xs-3">
+						<a href="index.html"> <img src="images/home2.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="sendMessage.html"> <img src="images/message.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="familyTree.html"> <img src="images/familytree.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="calendar.html"> <img src="images/calendar.png" align="center"> </a>
+					</div>
+				</div>
+			</div>
+
+	    <!--<p> <a href="login.html" id="logout" style="font-size: 32px"> Logout </a></p> -->
+		</div>
+
+		<!-- The overlay -->
+		<div id="myNav" class="overlay">
+
+		  <!-- Button to close the overlay navigation -->
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+		  <!-- Overlay content -->
+		  <div class="overlay-content">
+		  	<h1 id="dropMainTitle"> Settings </h1>
+		  	<h3 id="dropSub"> Account Settings </h3>
+		  	<p id="menuDrop"> Change Profile Pic </p>
+		  	<p id="menuDrop"> Push Notifications Settings </p>
+		  	<h3 id="dropSub"> General Settings </h3>
+		  	<p id="menuDrop"> Font Size </p>
+		  </div>
+
+		</div>
+
+	    <!--<p> <a href="login.html" id="logout" style="font-size: 32px"> Logout </a></p> -->
+		</div>
+
+		<!-- The overlay -->
+		<div id="myNav2" class="overlay">
+
+		  <!-- Button to close the overlay navigation -->
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+
+		  <!-- Overlay content -->
+		  <div class="overlay-content">
+		  	<h3 id="dropSub" onclick="famSelect(0)"> <a href="eventCreation.html" id="dropSub"> Add Event </h3>
+		  	<h3 id="dropSub"> <a  onclick="famSelect(0)" href="sendMessage.html" id="dropSub"> Send Message </h3>
+		  </div>
+
+		</div>
+
+		<!-- Use any element to open/show the overlay navigation menu
+		<span onclick="openNav()">open</span> -->
+
+		<script type="text/javascript">
+			/* Open when someone clicks on the span element */
+		function openNav() {
+		    document.getElementById("myNav").style.width = "100%";
+		}
+
+		/* Close when someone clicks on the "x" symbol inside the overlay */
+		function closeNav() {
+		    document.getElementById("myNav").style.width = "0%";
+		}
+
+
+			/* Open when someone clicks on the span element */
+		function openNav2() {
+		    document.getElementById("myNav2").style.width = "100%";
+		}
+
+		/* Close when someone clicks on the "x" symbol inside the overlay */
+		function closeNav2() {
+		    document.getElementById("myNav2").style.width = "0%";
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,117 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="connect.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="script.js"></script>
+	</head>
+
+	<body id="mainBack">
+		<div class="container-fluid" style="padding-top:15px">
+			<div id="content">
+					<div class="row" style="align-items:">
+					<div class="col-xs-3">
+						<a href="eventCreation.html" role="button" class="btn btn-success">Add Event +</a>
+					</div>
+					<div class="col-xs-9">
+						<p id="pageHeader"> Ryan's Calendar </p>
+					</div>
+				</div>
+
+				<div class="col-xs-12">
+					<div class="dropdown">
+  						<button onclick="calendarDrop()" class="dropbtn">Choose Calendar</button>
+  						<div id="myDropdown" class="dropdown-content">
+  						<a href="calendar.html"> My Calendar </a>
+    					<a href="rachelCalendar.html">Rachel's Calendar</a>
+    					<a href="leilaCalendar.html">Leila's Calendar</a>
+    					<a href="ryanCalendar.html">Ryan's Calendar</a>
+    					<a href="megCalendar.html"> Meg's Calendar </a>
+  						</div>
+					</div>
+				</div>
+
+				<div class="monthRyan">
+				  <ul>
+				    <li>
+				      <span style="font-size:48px">2017</span> <br>
+				      <p id="month">November</p>
+				    </li>
+				  </ul>
+				</div>
+
+				<ul class="weekdays">
+				  <li>Mo</li>
+				  <li>Tu</li>
+				  <li>We</li>
+				  <li>Th</li>
+				  <li>Fr</li>
+				  <li>Sa</li>
+				  <li>Su</li>
+				</ul>
+
+				<ul class="days">
+					<li onclick="selectDay('01','r')"> <span id="day1">1</span></li>
+				 <li onclick="selectDay('02','r')"> <span id="day2">2</span></li>
+				 <li onclick="selectDay('03','r')"> <span id="day3">3</span></li>
+				 <li onclick="selectDay('04','r')"> <span id="day4">4</span></li>
+				 <li onclick="selectDay('05','r')"> <span id="day5">5</span></li>
+				 <li onclick="selectDay('06','r')"> <span id="day6">6</span></li>
+				 <li onclick="selectDay('07','r')"> <span id="day7">7</span></li>
+				 <li onclick="selectDay('08','r')"> <span id="day8">8</span></li>
+				 <li onclick="selectDay('09','r')"> <span id="day9">9</span></li>
+				 <li onclick="selectDay('10','r')"> <span id="day10">10</span></li>
+				 <li onclick="selectDay('11','r')"> <span id="day11">11</span></li>
+				 <li onclick="selectDay('12','r')"> <span id="day12">12</span></li>
+				 <li onclick="selectDay('13','r')"> <span id="day13">13</span></li>
+				 <li onclick="selectDay('14','r')"> <span id="day14">14</span></li>
+				 <li onclick="selectDay('15','r')"> <span id="day15">15</span></li>
+				 <li onclick="selectDay('16','r')"> <span id="day16">16</span></li>
+				 <li onclick="selectDay('17','r')"> <span id="day17">17</span></li>
+				 <li onclick="selectDay('18','r')"> <span id="day18">18</span></li>
+				 <li onclick="selectDay('19','r')"> <span id="day19">19</span></li>
+				 <li onclick="selectDay('20','r')"> <span id="day20">20</span></li>
+				 <li onclick="selectDay('21','r')"> <span id="day21">21</span></li>
+				 <li onclick="selectDay('22','r')"> <span id="day22">22</span></li>
+				 <li onclick="selectDay('23','r')"> <span id="day23">23</span></li>
+				 <li onclick="selectDay('24','r')"> <span id="day24">24</span></li>
+				 <li onclick="selectDay('25','r')"> <span id="day25">25</span></li>
+				 <li onclick="selectDay('26','r')"> <span id="day26">26</span></li>
+				 <li onclick="selectDay('27','r')"> <span id="day27">27</span></li>
+				 <li onclick="selectDay('28','r')"> <span id="day28">28</span></li>
+				 <li onclick="selectDay('29','r')"> <span id="day29">29</span></li>
+				 <li onclick="selectDay('30','r')"> <span id="day30">30</span></li>
+				 <li onclick="selectDay('31','r')"> <span id="day31">31</span></li>
+				</ul>
+
+				<div id="eventInDay" class="col-xs-12">
+					<p id="eventsTitle"> Events for Day </p>
+					<p id="dayContent1"> </p>
+
+				</div>
+			</div>
+
+			<!-- Navigation bar at bottom -->
+			<div class="row">
+				<div class="col-xs-12" id="bottomNav">
+					<div class="col-xs-3">
+						<a href="index.html"> <img src="images/home.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="sendMessage.html"> <img src="images/message.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="familyTree.html"> <img src="images/FamilyTree.png" align="center"> </a>
+					</div>
+					<div class="col-xs-3">
+						<a href="calendar.html"> <img src="images/calendar2.png" align="center"> </a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

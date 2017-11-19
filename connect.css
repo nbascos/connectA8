@@ -1,0 +1,618 @@
+#screen{
+  background-color: #35407a;
+}
+
+#bottomNav {
+  background-color: #3ea583;
+	text-align: center;
+	position:fixed;
+	bottom: 0%;
+}
+
+/* Makes room for nav bar */
+#content{
+  margin-bottom: 13%;
+}
+
+#msgContent{
+  margin-bottom: 13%;
+  
+  bottom: 7%;
+}
+
+#pageHeader {
+	font-size: 5em;
+	font-weight: bold;
+	text-align: center;
+}
+
+#msgAlert{
+  position:fixed;
+  bottom:12%;
+  margin-left:2%;
+}
+
+#space {
+  height: 5%;
+}
+
+#icon{
+	padding-top: 50px;
+}
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: left; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    padding-left: 5%;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+#menuDrop {
+	color: white;
+	font-size: 48px;
+}
+
+#dropMainTitle {
+    color: white;
+    font-size: 96px;
+    padding-bottom: 2%;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+#dropSub {
+    color: white;
+    font-size: 72px;
+    padding-bottom: 3%;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+#actContainer {
+	border-style: solid;
+	border-color: #9cb7e2;
+  border-width: 1%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+	text-align: left;
+    background-color: #b2ffe4;
+    color: black;
+    font-weight: bold;
+}
+
+.actItem {
+	font-size: 2em;
+}
+
+#pageHeader {
+    text-align: right;
+    font-size: 64px;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    color: white;
+}
+
+#recentTitle {
+    font-size: 56px;
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 3%;
+}
+
+#topBar {
+    padding-bottom: 5%;
+    padding-top: 3%;
+}
+
+#mainBack {
+    background-color: #a3c2ba;
+}
+
+#addMember {
+    width: 95%;
+    font-size: 48px;
+    border-radius: 8px;
+    background-color: #93ead3;
+    position: absolute;
+    bottom: -70;
+}
+/* Commenting this out bc it's messing with -all- input of type=text
+input[type=text], select {
+    width: 85%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 48px;
+    position: absolute;
+    bottom: -75;
+    padding-left: 3%;
+}
+*/
+
+#firstGen {
+    padding-top: 5%;
+}
+
+#dropdown {
+    background-color: white;
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    font-size: 56px;
+    z-index: 2;
+    min-width: 85%;
+    padding-bottom: 5%;
+}
+
+#xbutton {
+    text-align: right;
+    padding-right: 2%;
+}
+
+#eventAdd {
+    padding-left: 4%;
+}
+
+#sendMessage {
+    padding-left: 4%;
+}
+
+#transparent-back{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.5);
+    z-index: 1;
+}
+
+#arrows {
+    padding-top: 3%;
+}
+
+#calendarBack {
+    background-color: #a3c2ba;
+}
+
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+    font-size: 64px;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.monthLeila {
+    padding: 70px 25px;
+    width: 100%;
+    background: red;
+    text-align: center;
+    font-size: 64px;
+}
+
+.monthLeila ul {
+    margin: 0;
+    padding: 0;
+}
+
+.monthLeila ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.monthLeila .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.monthLeila .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.monthRyan {
+    padding: 70px 25px;
+    width: 100%;
+    background: blue;
+    text-align: center;
+    font-size: 64px;
+}
+
+.monthRyan ul {
+    margin: 0;
+    padding: 0;
+}
+
+.monthRyan ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.monthRyan .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.monthRyan .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.monthMeg {
+    padding: 70px 25px;
+    width: 100%;
+    background: gray;
+    text-align: center;
+    font-size: 64px;
+}
+
+.monthMeg ul {
+    margin: 0;
+    padding: 0;
+}
+
+.monthMeg ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.monthMeg .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.monthMeg .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.monthRachel {
+    padding: 70px 25px;
+    width: 100%;
+    background: yellow;
+    text-align: center;
+    font-size: 64px;
+}
+
+.monthRachel ul {
+    margin: 0;
+    padding: 0;
+}
+
+.monthRachel ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.monthRachel .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.monthRachel .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    font-size: 32px;
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    font-size: 48px;
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #777;
+    padding-bottom: 36px;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+#month {
+    font-size: 4em;
+}
+
+#eventInDay {
+    padding-top: 3%;
+    padding-bottom: 13%;
+}
+
+#eventsTitle {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#dayContent {
+    font-size: 2em;
+}
+
+#familyNames {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+}
+
+#eventInDayRyan {
+    display: block;
+}
+
+body {
+  background-color: #a3c2ba;
+}
+
+#msgBanner{
+  width: 100%;
+  background-color: #41596b;
+  margin-top: 2%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#bannerText{
+  font-size: 3em;
+  position: relative;
+  top: 25%;
+  color: black;
+  font-weight: bold;
+
+}
+
+#recipientBanner{
+  height: auto;
+  width: 100%;
+  background-color: #d4e1eb;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#rbText{
+  font-size:2em;
+  position: relative;
+  top:30%;
+  margin-left: 30px;
+}
+
+#addRecip{
+  width: 105%;
+  margin-top: 13%;
+
+}
+
+#eventInputs{
+  font-size: 2em;
+  color: #c9d7e5;
+  width: 80%;
+  border: 5px solid white;
+  border-radius: 15%;
+  box-sizing: border-box;
+  height: 80%;
+}
+
+#loginInput {
+  font-size: 2em;
+  padding-bottom: 8%;
+}
+
+#pageHeader {
+    text-align: right;
+    font-size: 4em;
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-bottom: 4%;
+    color: white;
+}
+
+#formTop {
+  padding-left: 3%;
+}
+
+#loginButton {
+  font-size: 3em;
+  padding: 5%;
+}
+
+#eventInfo {
+  background-color: white;
+  font-size: 3em;
+  width: 85%;
+  padding-top: 2%;
+  padding-bottom: 4%;
+  padding-left: 2%;
+}
+
+#loginButtonRyan {
+  font-size: 3em;
+  padding: 5%;
+  width: 75%;
+}
+
+#logout {
+  position:relative;
+}
+
+#sendMsgBtn{
+  width:120%;
+  margin-bottom:5%;
+  margin-right:5%;
+}
+
+#msgSender{
+  position:fixed;
+  bottom:6%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
