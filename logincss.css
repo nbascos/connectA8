@@ -4,15 +4,16 @@ body {
 
 /* Graphic box on login screen */
 #loginBox {
-    border-radius: 25px;
-    border: 5px solid #9cb7e2;
-    background: #93ead3;
-    padding: 20px;
-    width: 400px;
-    height: 500px;
-		margin:auto;
-		position:relative;
-		margin-top:20%;
+  border-radius: 8%;
+  border: 0.5em solid #9cb7e2;
+  background: #93ead3;
+  padding: 7%;
+  padding-top: 8%;
+  width: 70%;
+  height: 50em;
+  margin: auto;
+  position: relative;
+  margin-top: 50%;
 }
 
 /* Part of the graphic box on login sceren */
