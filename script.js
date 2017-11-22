@@ -97,12 +97,36 @@ function displayEvent( day, memb ){
   }
 }
 
+// Shows which days have events stored
+function denoteEvents(){
+  var eventNum = parseInt(sessionStorage.getItem('eventIndex'));
+  for(i=0;i<eventNum;i++){
+    var dayStr = "day" + parseInt(selectedDay);
+    document.getElementById(dayStr).className = "";
+  }
+  for(i=0;i<eventNum;i++){
+    var eventObj = JSON.parse(sessionStorage.getItem('event'+i));
+    var date = eventObj.date;
+    var day = date.slice(date.length-2);
+    var dayStr = "day" + day;
+    document.getElementById(dayStr).className = "filled";
+    console.log(dayStr);
+  }
+}
+
 function selectDay( day, memb ){
   clearEventDisplay();
-  var dayStr = "day" + parseInt(selectedDay);
-  document.getElementById(dayStr).className -= "active";
-  dayStr = "day" + parseInt(day);
-  document.getElementById(dayStr).className = "active";
+  var dayStr1 = "day" + parseInt(selectedDay);
+  var eventClass = document.getElementById(dayStr1).className;
+  console.log(eventClass);
+  document.getElementById(dayStr1).className -= "active";
+  var dayStr2 = "day" + parseInt(day);
+  document.getElementById(dayStr2).className = "active";
+  if (eventClass == "filled"){
+    console.log(dayStr1);
+    document.getElementById(dayStr1).className = "filled";
+  }
+
   selectedDay = day;
 
   displayEvent(selectedDay, memb);
@@ -183,6 +207,7 @@ function displayMsg(){
     clearMsgDisplay();
   }
   var msgNum = parseInt(sessionStorage.getItem('msgIndex'));
+  var bigSpace = '<p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p>'
   if (memb>0){
     for (i=0;i<msgNum;i++){
 
@@ -191,13 +216,14 @@ function displayMsg(){
 
       if (msgObj.member == memb){
 
-        var newMsg = '<div class="panel-body"> \
+        var newMsg = '<div class = "panel panel-primary"> <div class="panel-body"> \
                   <p>' + msgObj.msg + '</p> \
-                 </div>';
+                 </div></div>';
 
-        document.getElementById('textBubble').innerHTML += (newMsg);
+        document.getElementById('textBubble').innerHTML =  document.getElementById('textBubble').innerHTML + 'Me' + (newMsg);
       }
     }
+    document.getElementById('textBubble').innerHTML = document.getElementById('textBubble').innerHTML + bigSpace;
   }
 }
 
@@ -236,13 +262,21 @@ function sendMsg(){
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> \
                 <strong>Write your message first!</strong> \
            </div>';
+    document.getElementById('msgAlert').innerHTML = str;
+    return;
   }
 
   document.getElementById('msgAlert').innerHTML = str;
   var newMsgIndex = parseInt(sessionStorage.getItem('msgIndex')) + 1;
   sessionStorage.setItem('msgIndex', newMsgIndex);
 
+  document.getElementById('msgInput').value = "";
   displayMsg();
+}
+
+function checkLogin(){
+  var input1 = document.getElementById('loginInput').value;
+  console.log(1);
 }
 
 

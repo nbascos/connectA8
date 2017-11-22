@@ -9,12 +9,12 @@
 			<script src="script.js"></script>
 	</head>
 
-	<body id="mainBack">
+	<body id="mainBack" onload=denoteEvents()>
 		<div class="container-fluid" style="padding-top:15px">
 			<div id="content">
 					<div class="row" style="align-items:">
 					<div class="col-xs-3">
-						<a onclick="famSelect(0)" href="eventCreation.html" role="button" class="btn btn-success">Add Event +</a>
+						<a onclick="famSelect(0)" href="eventCreation.html" role="button" class="btn btn-success">Create Event +</a>
 					</div>
 					<div class="col-xs-9">
 						<p id="pageHeader"> Calendar </p>
@@ -54,15 +54,15 @@
 				</ul>
 
 				<ul class="days">
-				  <li onclick="selectDay('01','')"> <span id="day1">1</span></li>
-					<li onclick="selectDay('02','')"> <span id="day2">2</span></li>
-					<li onclick="selectDay('03','')"> <span id="day3">3</span></li>
-					<li onclick="selectDay('04','')"> <span id="day4">4</span></li>
-					<li onclick="selectDay('05','')"> <span id="day5">5</span></li>
-					<li onclick="selectDay('06','')"> <span id="day6">6</span></li>
-					<li onclick="selectDay('07','')"> <span id="day7">7</span></li>
-					<li onclick="selectDay('08','')"> <span id="day8">8</span></li>
-					<li onclick="selectDay('09','')"> <span id="day9">9</span></li>
+				  <li onclick="selectDay('01','')"> <span id="day1">01</span></li>
+					<li onclick="selectDay('02','')"> <span id="day2">02</span></li>
+					<li onclick="selectDay('03','')"> <span id="day3">03</span></li>
+					<li onclick="selectDay('04','')"> <span id="day4">04</span></li>
+					<li onclick="selectDay('05','')"> <span id="day5">05</span></li>
+					<li onclick="selectDay('06','')"> <span id="day6">06</span></li>
+					<li onclick="selectDay('07','')"> <span id="day7">07</span></li>
+					<li onclick="selectDay('08','')"> <span id="day8">08</span></li>
+					<li onclick="selectDay('09','')"> <span id="day9">09</span></li>
 					<li onclick="selectDay('10','')"> <span id="day10">10</span></li>
 					<li onclick="selectDay('11','')"> <span id="day11">11</span></li>
 					<li onclick="selectDay('12','')"> <span id="day12">12</span></li>

@@ -15,8 +15,9 @@
 }
 
 #msgContent{
+  margin-top:30%;
   margin-bottom: 13%;
-  
+
   bottom: 7%;
 }
 
@@ -28,7 +29,7 @@
 
 #msgAlert{
   position:fixed;
-  bottom:12%;
+  bottom:15%;
   margin-left:2%;
 }
 
@@ -425,6 +426,10 @@ body {font-family: Verdana, sans-serif;}
     color: white !important
 }
 
+.days li .filled {
+  background: #aaaaaa;
+}
+
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
     .weekdays li, .days li {width: 13.1%;}
@@ -473,17 +478,18 @@ body {
 
 #msgBanner{
   width: 100%;
-  background-color: #41596b;
-  margin-top: 2%;
+  background-color: #494e72;
   padding-top: 3%;
   padding-bottom: 3%;
+  position: fixed;
+  z-index: 1;
 }
 
 #bannerText{
   font-size: 3em;
   position: relative;
   top: 25%;
-  color: black;
+  color: white;
   font-weight: bold;
 
 }
@@ -494,6 +500,9 @@ body {
   background-color: #d4e1eb;
   padding-top: 3%;
   padding-bottom: 3%;
+  position: fixed;
+  z-index: 1;
+  margin-top:15%;
 }
 
 #rbText{
@@ -568,8 +577,12 @@ body {
 }
 
 #msgSender{
-  position:fixed;
-  bottom:6%;
+  position: fixed;
+  bottom: 6%;
+  background-color: #495173;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  margin-left: -2%;
 }
 
 /* Dropdown Button */

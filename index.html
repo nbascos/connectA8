@@ -17,7 +17,7 @@
 	<body id="mainBack" >
 		<div class="container-fluid">
 			<div id="content">
-			<!-- First generation, header buttons -->
+			<!-- Header buttons -->
 			<div class="row">
 				<div class="col-xs-12" id="topBar">
 
@@ -26,7 +26,7 @@
 					</div>
 					<div class="col-xs-2">
 
-						<button type="button" class= "btn" onclick="openNav2()"> Add Event / Send Msg</button>
+						<button type="button" class= "btn" onclick="openNav2()"> Create Event / Send Msg</button>
 					</div>
 
 				  <div class="col-xs-3">
@@ -44,8 +44,9 @@
 
 
 			<!-- Header of middle bulk -->
-
-			<p id="recentTitle"> Recent Activity </p>
+			<div class="col-xs-12">
+				<p id="recentTitle"> Recent Activity </p>
+			</div>
 
 
 			<!-- Activity Bulk -->
@@ -143,7 +144,7 @@
 
 		  <!-- Overlay content -->
 		  <div class="overlay-content">
-		  	<h3 id="dropSub" onclick="famSelect(0)"> <a href="eventCreation.html" id="dropSub"> Add Event </h3>
+		  	<h3 id="dropSub" onclick="famSelect(0)"> <a href="eventCreation.html" id="dropSub"> Create Event </h3>
 		  	<h3 id="dropSub"> <a  onclick="famSelect(0)" href="sendMessage.html" id="dropSub"> Send Message </h3>
 		  </div>
 
