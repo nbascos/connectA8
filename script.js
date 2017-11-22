@@ -80,7 +80,6 @@ function eventAlert(){
 function displayEvent( day, memb ){
   var desiredDate = "2017-11-" + day;
   var eventNum = parseInt(sessionStorage.getItem('eventIndex'));
-  console.log(desiredDate);
   for (i=0;i<eventNum;i++){
     var eventStr = 'event' + i;
     var eventObj = JSON.parse(sessionStorage.getItem(eventStr));
@@ -97,39 +96,47 @@ function displayEvent( day, memb ){
   }
 }
 
-// Shows which days have events stored
-function denoteEvents(){
+function refreshCalendar(memb){
   var eventNum = parseInt(sessionStorage.getItem('eventIndex'));
   for(i=0;i<eventNum;i++){
     var dayStr = "day" + parseInt(selectedDay);
-    document.getElementById(dayStr).className = "";
   }
+  denoteEvents(memb);
+}
+
+// Shows which days have events stored
+function denoteEvents(memb){
+  var eventNum = parseInt(sessionStorage.getItem('eventIndex'));
   for(i=0;i<eventNum;i++){
     var eventObj = JSON.parse(sessionStorage.getItem('event'+i));
     var date = eventObj.date;
     var day = date.slice(date.length-2);
     var dayStr = "day" + day;
-    document.getElementById(dayStr).className = "filled";
-    console.log(dayStr);
+    var eventClass = document.getElementById(dayStr).className;
+    if (eventObj.member == memb){
+      document.getElementById(dayStr).className = "filled";
+    }
+    if (eventClass == "active"){
+      document.getElementById(dayStr).className = "active";
+    }
   }
 }
 
 function selectDay( day, memb ){
   clearEventDisplay();
+  // Previously selected day
   var dayStr1 = "day" + parseInt(selectedDay);
-  var eventClass = document.getElementById(dayStr1).className;
-  console.log(eventClass);
-  document.getElementById(dayStr1).className -= "active";
+  // New day
   var dayStr2 = "day" + parseInt(day);
+
+  // Store old class name to check if it was a "filled" event
+  var eventClass = document.getElementById(dayStr2).className;
+  document.getElementById(dayStr1).className -= "active";
   document.getElementById(dayStr2).className = "active";
-  if (eventClass == "filled"){
-    console.log(dayStr1);
-    document.getElementById(dayStr1).className = "filled";
-  }
 
   selectedDay = day;
-
   displayEvent(selectedDay, memb);
+  denoteEvents();
 }
 
 function clearEventDisplay(){
