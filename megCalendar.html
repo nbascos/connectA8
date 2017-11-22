@@ -9,7 +9,7 @@
 			<script src="script.js"></script>
 	</head>
 
-	<body id="mainBack">
+	<body id="mainBack" onload="refreshCalendar('m')">
 		<div class="container-fluid" style="padding-top:15px">
 			<div id="content">
 					<div class="row" style="align-items:">
@@ -85,7 +85,7 @@
 					<li onclick="selectDay('29','m')"> <span id="day29">29</span></li>
 					<li onclick="selectDay('30','m')"> <span id="day30">30</span></li>
 					<li onclick="selectDay('31','m')"> <span id="day31">31</span></li>
-				
+
 				</ul>
 
 				<div id="eventInDay" class="col-xs-12">

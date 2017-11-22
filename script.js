@@ -14,7 +14,7 @@ function saveEvent(){
   // Figure which event you're on if on a single day
   var eventNum = sessionStorage.getItem('eventIndex');
   var famCode = findFamCode(sessionStorage.getItem('selectedFam'));
-
+  console.log(famCode);
   /* Using JSON.stringify */
   var eventObj =
   {
@@ -295,6 +295,40 @@ function calendarDrop() {
 
 function displayTest(){
   console.log(document.getElementById('recipList').selectedIndex);
+}
+
+function fillActivities(){
+  var eventNum = parseInt(sessionStorage.getItem('eventIndex'));
+  for (i=0;i<eventNum;i++){
+    var eventStr = 'event' + i;
+    var eventObj = JSON.parse(sessionStorage.getItem(eventStr));
+    var fam = eventObj.member;
+    var titleStr;
+    if (fam == ''){
+      titleStr = "Coming up for me:";
+    }
+    if (fam == 'l'){
+      titleStr = "Added for Leila:";
+    }
+    if (fam == 'r'){
+      titleStr = "Added for Ryan:";
+    }
+    if (fam == 'ra'){
+      titleStr = "Added for Rachel:";
+    }
+    if (fam == 'm'){
+      titleStr = "Added for Meg:";
+    }
+    var newEvent = '<div class="panel panel-primary"> \
+                      <div class="panel-heading">' + titleStr + '</div> \
+                      <div class="panel-body"> \
+                        <p>' + eventObj.date + '</p> \
+                        <p>' + eventObj.name + '</p> \
+                      </div> \
+                    </div>';
+    document.getElementById('activityBlurb').innerHTML = (newEvent) + document.getElementById('activityBlurb').innerHTML;
+
+  }
 }
 
 // Close the dropdown menu if the user clicks outside of it

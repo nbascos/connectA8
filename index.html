@@ -14,7 +14,7 @@
 		<script src="script.js"></script>
 	</head>
 
-	<body id="mainBack" >
+	<body id="mainBack" onload=fillActivities() >
 		<div class="container-fluid">
 			<div id="content">
 			<!-- Header buttons -->
@@ -51,7 +51,7 @@
 
 			<!-- Activity Bulk -->
 			<div class="col-xs-12" id="actContainer">
-					<ul>
+						<!--
 						<li class="actItem">
 							<p> - Jerome created event: <a href="calendar.html">2017 Family Reunion</a></p>
 						</li>
@@ -88,7 +88,9 @@
 						<li class="actItem">
 							<p> - Bernard finished reminder: <a href="calendar.html">take insulin</a></p>
 						</li>
-					</ul>
+					-->
+						<div id="activityBlurb"> </div>
+					
 			</div>
 			<a href="login.html" role="button" class="btn btn-default">Logout</a>
 		</div>
