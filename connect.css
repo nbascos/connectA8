@@ -3,7 +3,7 @@
 }
 
 #bottomNav {
-  background-color: #3ea583;
+  background-color: #D0CEBA;
 	text-align: center;
 	position:fixed;
 	bottom: 0%;
@@ -161,7 +161,15 @@
 }
 
 #mainBack {
-    background-color: #a3c2ba;
+    background-color: #71A9F7;
+}
+
+#familyTreeBack {
+    background-color: #B2F4CC;
+}
+
+#calendarBack {
+    background-color: #84A9C0;
 }
 
 #addMember {
@@ -229,10 +237,6 @@ input[type=text], select {
 
 #arrows {
     padding-top: 3%;
-}
-
-#calendarBack {
-    background-color: #a3c2ba;
 }
 
 * {box-sizing: border-box;}
