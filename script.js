@@ -346,6 +346,13 @@ window.onclick = function(event) {
   }
 }
 
+function trackEvt1(){
+  console.log("calendar1 button clicked");
+  // tracker code here, refer to slide #26
+  tracker = ga.getAll()[0];
+  tracker.send('event','button','clicked');
+}
+
 $(".dropbtn").click(function() {
  console.log("calendar1 button clicked");
  // tracker code here, refer to slide #26
