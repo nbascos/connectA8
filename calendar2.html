@@ -1,6 +1,21 @@
 <DOCTYPE! html>
 <html>
 	<head>
+		<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='165412353-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110392723-1"></script>
 <script>
@@ -37,16 +52,16 @@
   						<a href="calendar2.html" class="btn btn-info" role="button"> My Calendar </a>
   						</div>
   						<div class="col-xs-2">
-  						<a href="rachelCalendar2.html" class="btn btn-info" role="button">Rachel's Calendar </a>
+  						<a href="rachelCalendar2.html" class="btn btn-info" onclick=trackEvt1() role="button">Rachel's Calendar </a>
   						</div>
   						<div class="col-xs-2">
-  						<a href="leilaCalendar2.html" class="btn btn-info" role="button">Leila's Calendar</a>
+  						<a href="leilaCalendar2.html" class="btn btn-info" onclick=trackEvt1() role="button">Leila's Calendar</a>
   						</div>
   						<div class="col-xs-2">
-  						<a href="ryanCalendar2.html" class="btn btn-info" role="button">Ryan's Calendar</a>
+  						<a href="ryanCalendar2.html" class="btn btn-info"  onclick=trackEvt1() role="button">Ryan's Calendar</a>
   						</div>
   						<div class="col-xs-2">
-  						<a href="megCalendar2.html" class="btn btn-info" role="button">Meg's Calendar</a>
+  						<a href="megCalendar2.html" class="btn btn-info" onclick=trackEvt1() role="button">Meg's Calendar</a>
   						</div>
   						<div class="col-xs-1">
   						</div>
