@@ -345,3 +345,10 @@ window.onclick = function(event) {
     }
   }
 }
+
+$(".dropbtn").click(function() {
+ console.log("calendar1 button clicked");
+ // tracker code here, refer to slide #26
+ tracker = ga.getAll()[0];
+ tracker.send('event','button','clicked');
+});
