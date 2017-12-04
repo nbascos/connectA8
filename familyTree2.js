@@ -1,10 +1,8 @@
 <script type="text/javascript">
 
 // Create a svg canvas
-var svg = document.getElementById("#drawArea");
-  .append("svg");
-  .attr("width", 700);
-  .attr("height", 500);
+var canvas = document.getElementById("#drawArea");
+var c = canvas.getContext("2d");
 
 
 /*
