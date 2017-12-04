@@ -334,6 +334,23 @@ function fillActivities(){
   }
 }
 
+function createShape(){
+  var svg = createShape.select("#drawArea")
+  .append("svg")
+  .attr("width", 700)
+  .attr("height", 500);
+
+  var g1 = svg.append("g")
+.attr("transform", "translate(" + 150 + "," + 100 + ")")
+  .attr("class", "first")
+  .call(drag)
+  .append("circle").attr({
+    r: 20,
+  })
+  .style("fill", "#F00")
+
+}
+
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {

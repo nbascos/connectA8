@@ -1,0 +1,33 @@
+<DOCTYPE! html>
+<html>
+	<head>
+
+    <script>
+    var svg = example.select("#drawArea")
+    .append("svg")
+    .attr("width", 700)
+    .attr("height", 500);
+
+    var line = svg.append("line")
+    .style("stroke", "black")
+    .attr("x1", 150)
+    .attr("y1", 100)
+    .attr("x2", 250)
+    .attr("y2", 300);
+    </script>
+	</head>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="script.js"></script>
+		<link rel="stylesheet" href="logincss.css">
+    <body onload=createShape()>
+		<div class="container-fluid">
+			<div class="col-xs-12">
+        <div id="drawArea"></div>
+		  </div>
+    </div>
+	</body>
+</html>
