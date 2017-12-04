@@ -492,9 +492,10 @@ body {
 #treeBanner{
   width: 100%;
   background-color: #494e72;
+  left: 0;
   padding-top: 3%;
   padding-bottom: 3%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
 }
 
