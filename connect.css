@@ -21,6 +21,16 @@
   bottom: 7%;
 }
 
+#pageBanner {
+  width: 100%;
+  background-color: #494e72;
+  left: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  position: absolute;
+  z-index: 1;
+}
+
 #pageHeader {
 	font-size: 5em;
 	font-weight: bold;
@@ -663,4 +673,8 @@ body {
 }
 #connectLogo {
   padding: 10px;
+}
+
+#treeIcon {
+  padding: 5px;
 }
