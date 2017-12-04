@@ -151,7 +151,7 @@
     font-size: 56px;
     color: white;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 20%;
     padding-bottom: 3%;
 }
 
@@ -489,6 +489,25 @@ body {
   z-index: 1;
 }
 
+#treeBanner{
+  width: 100%;
+  background-color: #494e72;
+  left: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  position: absolute;
+  z-index: 1;
+}
+
+#topBar{
+  width: 100%;
+  background-color: #494e72;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  position: fixed;
+  z-index: 1;
+}
+
 #bannerText{
   font-size: 3em;
   position: relative;
@@ -633,3 +652,15 @@ body {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/*image padding*/
+#connectImg {
+  padding: 25px 5px 0px 0px;
+}
+
+#quickButton {
+  padding: 20px;
+}
+#connectLogo {
+  padding: 10px;
+}
