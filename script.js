@@ -78,7 +78,7 @@ function eventAlert(){
 
 // Takes var day, aka desired date to be displayed
 function displayEvent( day, memb ){
-  var desiredDate = "2017-11-" + day;
+  var desiredDate = "2017-12-" + day;
   var eventNum = parseInt(sessionStorage.getItem('eventIndex'));
   for (i=0;i<eventNum;i++){
     var eventStr = 'event' + i;
@@ -136,7 +136,7 @@ function selectDay( day, memb ){
 
   selectedDay = day;
   displayEvent(selectedDay, memb);
-  denoteEvents();
+  denoteEvents(memb);
 }
 
 function clearEventDisplay(){
@@ -322,12 +322,15 @@ function fillActivities(){
     var newEvent = '<div class="panel panel-primary"> \
                       <div class="panel-heading">' + titleStr + '</div> \
                       <div class="panel-body"> \
-                        <p>' + eventObj.date + '</p> \
                         <p>' + eventObj.name + '</p> \
+                        <p>' + eventObj.date + '</p> \
                       </div> \
                     </div>';
     document.getElementById('activityBlurb').innerHTML = (newEvent) + document.getElementById('activityBlurb').innerHTML;
 
+  }
+  if (eventNum == 0){
+    document.getElementById('activityBlurb').innerHTML = "<p> No recent events... </p>";
   }
 }
 
@@ -344,4 +347,18 @@ window.onclick = function(event) {
       }
     }
   }
+}
+
+function trackEvt1(){
+  console.log("calendar1 button clicked");
+  // tracker code here, refer to slide #26
+  tracker = ga.getAll()[0];
+  tracker.send('event','cal 1 button','clicked');
+}
+
+function trackEvt2(){
+  console.log("calendar2 button clicked");
+  // tracker code here, refer to slide #26
+  tracker = ga.getAll()[0];
+  tracker.send('event','cal 2 button','clicked');
 }

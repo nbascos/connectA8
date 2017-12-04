@@ -1,6 +1,22 @@
 <DOCTYPE! html>
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110392723-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-110392723-1');
+</script>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="connect.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="script.js"></script>
+	</head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="connect.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,19 +41,19 @@
   						<div class="col-xs-1">
   						</div>
   						<div class="col-xs-2">
-  						<a href="calendar2.html" class="btn btn-info" role="button"> My Calendar </a>
+  						<a href="calendar2.html"onclick=trackEvt1() class="btn btn-info" role="button"> My Calendar </a>
   						</div>
   						<div class="col-xs-2">
-  						<a href="rachelCalendar2.html" class="btn btn-info" role="button">Rachel's Calendar </a>
+  						<a href="rachelCalendar2.html"onclick=trackEvt1() class="btn btn-info" role="button">Rachel's Calendar </a>
   						</div>
   						<div class="col-xs-2">
-  						<a href="leilaCalendar2.html" class="btn btn-info" role="button">Leila's Calendar</a>
+  						<a href="leilaCalendar2.html"onclick=trackEvt1() class="btn btn-info" role="button">Leila's Calendar</a>
   						</div>
   						<div class="col-xs-2">
-  						<a href="ryanCalendar2.html" class="btn btn-info" role="button">Ryan's Calendar</a>
+  						<a href="ryanCalendar2.html"onclick=trackEvt1() class="btn btn-info" role="button">Ryan's Calendar</a>
   						</div>
   						<div class="col-xs-2">
-  						<a href="megCalendar2.html" class="btn btn-info" role="button">Meg's Calendar</a>
+  						<a href="megCalendar2.html"onclick=trackEvt1() class="btn btn-info" role="button">Meg's Calendar</a>
   						</div>
   						<div class="col-xs-1">
   						</div>
@@ -118,6 +134,7 @@
 					</div>
 					<div class="col-xs-3">
 						<a href="calendar.html"> <img src="images/calendar2.png" align="center"> </a>
+						<a href="calendar2.html"> <img src="images/calendar.png" align="right"> </a>
 					</div>
 				</div>
 			</div>
