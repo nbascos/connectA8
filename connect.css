@@ -489,6 +489,15 @@ body {
   z-index: 1;
 }
 
+#treeBanner{
+  width: 100%;
+  background-color: #494e72;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  position: fixed;
+  z-index: 1;
+}
+
 #bannerText{
   font-size: 3em;
   position: relative;
@@ -633,3 +642,12 @@ body {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/*image padding*/
+#connectImg {
+  padding: 20px 5px 0px 0px;
+}
+
+#quickButton {
+  padding: 20px;
+}
