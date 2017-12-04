@@ -111,7 +111,8 @@ function denoteEvents(memb){
     var eventObj = JSON.parse(sessionStorage.getItem('event'+i));
     var date = eventObj.date;
     var day = date.slice(date.length-2);
-    var dayStr = "day" + day;
+    var dayStr = "day" + parseInt(day);
+    console.log(date);
     var eventClass = document.getElementById(dayStr).className;
     if (eventObj.member == memb){
       document.getElementById(dayStr).className = "filled";
@@ -128,6 +129,7 @@ function selectDay( day, memb ){
   var dayStr1 = "day" + parseInt(selectedDay);
   // New day
   var dayStr2 = "day" + parseInt(day);
+  console.log(dayStr2);
 
   // Store old class name to check if it was a "filled" event
   var eventClass = document.getElementById(dayStr2).className;
@@ -214,7 +216,7 @@ function displayMsg(){
     clearMsgDisplay();
   }
   var msgNum = parseInt(sessionStorage.getItem('msgIndex'));
-  var bigSpace = '<p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p><p>-</p>'
+  var bigSpace = '<p>_</p><p>_</p><p>_</p><p>_</p><p>_</p><p>_</p><p>_</p>'
   if (memb>0){
     for (i=0;i<msgNum;i++){
 
@@ -334,6 +336,7 @@ function fillActivities(){
   }
 }
 
+/*
 function createShape(){
   var svg = createShape.select("#drawArea")
   .append("svg")
@@ -350,6 +353,7 @@ function createShape(){
   .style("fill", "#F00")
 
 }
+*/
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {

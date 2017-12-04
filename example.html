@@ -2,19 +2,7 @@
 <html>
 	<head>
 
-    <script>
-    var svg = example.select("#drawArea")
-    .append("svg")
-    .attr("width", 700)
-    .attr("height", 500);
 
-    var line = svg.append("line")
-    .style("stroke", "black")
-    .attr("x1", 150)
-    .attr("y1", 100)
-    .attr("x2", 250)
-    .attr("y2", 300);
-    </script>
 	</head>
 		<meta charset="utf-8">
 
@@ -29,5 +17,19 @@
         <div id="drawArea"></div>
 		  </div>
     </div>
+
+    <script>
+    var svg = document.getElementById("drawArea")
+    .append("svg")
+    .attr("width", 700)
+    .attr("height", 500);
+
+    var line = svg.append("line")
+    .style("stroke", "black")
+    .attr("x1", 150)
+    .attr("y1", 100)
+    .attr("x2", 250)
+    .attr("y2", 300);
+    </script>
 	</body>
 </html>
